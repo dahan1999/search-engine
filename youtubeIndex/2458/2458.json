@@ -1,0 +1,1 @@
+{"text":" Multivariable Calculus | Two Stoke's theorem examples.\n\n[imath]\\begin{aligned}\\n&\\oint_{C} 2 x y^{2} z d x+2 x^{2} y z d y+\\left(x^{2} y^{2}-2 z\\right) d z\\\\\\n&\\int_{S} \\int_{\\phi} d(\\vec{\\nabla} \\times \\vec{F}) \\cdot d \\vec{S}\\n\\end{aligned}[/imath]\n\n\n", "url":"https://www.youtube.com/watch?v=0YEsKPK0be8"}
