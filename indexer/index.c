@@ -9,6 +9,9 @@
 #include "config.h"
 
 #undef NDEBUG
+#ifndef DEBUG_INDEXER
+#define DEBUG_INDEXER 1
+#endif
 #include <assert.h>
 
 static void        *term_index = NULL;
@@ -266,6 +269,7 @@ int indexer_index_json(FILE *fh, text_lexer lex)
 	}
 
 	if (!get_json_val(doc_json, "url", url_field)) {
+		fprintf(stderr, doc_json);
 		fprintf(stderr, "JSON: get URL field failed.\n");
 		return 1;
 	}

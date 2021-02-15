@@ -5,6 +5,7 @@
 /*
  * Redirect mobile visitors to PC/tablet,
  * because mathquill does not support mobile.
+require_once 'vendor/mobile-detect/Mobile_Detect.php';
  */
 require_once 'vendor/mobile-detect/Mobile_Detect.php';
 $detect = new Mobile_Detect;

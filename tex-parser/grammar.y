@@ -27,7 +27,8 @@ char grammar_last_err_str[MAX_GRAMMAR_ERR_STR_LEN] = "";
 	}
 } <nd>
 
-%error-verbose
+/*%error-verbose*/
+%define parse.error verbose
 
 /* ====================
  * token definitions
@@ -450,6 +451,11 @@ pair: _L_BRACKET tex _R_BRACKET {
 	struct optr_node *pair;
 	pair = optr_alloc(S_bracket, T_GROUP, WC_COMMUT_OPERATOR);
 	OPTR_ATTACH($$, $2, NULL, pair);
+}
+| _L_BRACKET MODULAR tex _R_BRACKET {
+	struct optr_node *pair;
+	pair = optr_alloc(S_bracket, T_GROUP, WC_COMMUT_OPERATOR);
+	OPTR_ATTACH($$, $2, $3, pair);
 }
 /* bracket array */
 | _L_DOT tex _R_BRACKET {

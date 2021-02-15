@@ -1,0 +1,1 @@
+tmux new -d -s searchd_session './run/searchd.out -i ./youtubeIndex'
