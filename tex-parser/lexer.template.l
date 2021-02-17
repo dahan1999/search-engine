@@ -231,6 +231,7 @@ extern int lexer_warning_flag;
 \\left[ ]*\\lgroup                                                { return _L_BRACKET; }
 \\left[ ]*"["                                                     { return _L_BRACKET; }
 \\left[ ]*"\{"                                                    { return _L_BRACKET; }
+\\left[ ]*"\\\{"                                                    { return _L_BRACKET; }
 \\left[ ]*\\langle                                                  { return _L_ANGLE; }
 \\left[ ]*"<"                                                       { return _L_ANGLE; }
 \\left[ ]*"/"                                                       { return _L_SLASH; }
@@ -255,6 +256,7 @@ extern int lexer_warning_flag;
 \\right[ ]*\\rgroup                                               { return _R_BRACKET; }
 \\right[ ]*"]"                                                    { return _R_BRACKET; }
 \\right[ ]*"\}"                                                   { return _R_BRACKET; }
+\\right[ ]*"\\\}"                                                   { return _R_BRACKET; }
 \\right[ ]*\\rangle                                                 { return _R_ANGLE; }
 \\right[ ]*">"                                                      { return _R_ANGLE; }
 \\right[ ]*"/"                                                      { return _R_SLASH; }
